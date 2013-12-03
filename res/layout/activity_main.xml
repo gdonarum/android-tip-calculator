@@ -9,8 +9,76 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/tipAmountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignLeft="@+id/tipTextView"
+        android:layout_below="@+id/tipNumberPicker"
+        android:text="@string/tip_amount_text_view" />
+
+    <TextView
+        android:id="@+id/billTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/billEditText"
+        android:text="@string/bill_text_view" />
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipNumberPicker"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/bill_edit_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/tipAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipNumberPicker"
+        android:layout_alignTop="@+id/tipAmountTextView"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/tip_amount_edit_text" />
+
+    <EditText
+        android:id="@+id/finalBillEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipAmountEditText"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/final_bill_edit_text" />
+
+    <TextView
+        android:id="@+id/finalBillTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipAmountTextView"
+        android:layout_alignTop="@+id/finalBillEditText"
+        android:text="@string/final_bill_text_view" />
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billTextView"
+        android:layout_below="@+id/billEditText"
+        android:layout_marginTop="56dp"
+        android:text="@string/tip_text_view" />
+
+    <NumberPicker
+        android:id="@+id/tipNumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/billEditText"
+        android:layout_toRightOf="@+id/tipTextView" />
 
 </RelativeLayout>
